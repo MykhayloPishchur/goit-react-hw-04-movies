@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-// import { Link } from "react-router-dom";
 import api from "../../Services/Services";
 import MovieGalleryItem from "../../Components/MoviesGalleryItem";
 import styles from "./homepage.module.css";

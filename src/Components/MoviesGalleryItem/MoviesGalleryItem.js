@@ -11,14 +11,17 @@ const movieGalleryItem = ({ items }) => (
           className={styles.item}
           to={{ pathname: `/movies/${item.id}` }}
         >
-          <img
-            src={
-              item.backdrop_path
-                ? "https://image.tmdb.org/t/p/original" + item.backdrop_path
-                : "hello"
-            }
-            alt={item.title}
-          />
+          <div className={styles.imgContainer}>
+            <img
+              className={styles.galleryItem}
+              src={
+                item.backdrop_path
+                  ? "https://image.tmdb.org/t/p/original" + item.backdrop_path
+                  : "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSAUmka06uFKW8BxmZXi8uH_N1euTnUnTWmhQ&usqp=CAU"
+              }
+              alt={item.title}
+            />
+          </div>
           <div className={styles.cardDescription}>
             <span>{item.title}</span>
             <span style={{ fontWeight: 700, color: "#944dff" }}>
@@ -37,7 +40,7 @@ movieGalleryItem.propTypes = {
   items: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
-      backdrop_path: PropTypes.string.isRequired,
+      backdrop_path: PropTypes.string,
       title: PropTypes.string.isRequired,
       vote_average: PropTypes.number.isRequired,
     })

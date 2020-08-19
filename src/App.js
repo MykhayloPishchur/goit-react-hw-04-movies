@@ -9,12 +9,14 @@ const HomePage = lazy(() =>
 );
 
 const SearchMovie = lazy(() =>
-  import("./Pages/MoviesSearch.js" /* webpackChunkName: "moviesSearch-page" */)
+  import(
+    "./Pages/MoviesSearch/MoviesSearch.js" /* webpackChunkName: "moviesSearch-page" */
+  )
 );
 
 const MovieDettails = lazy(() =>
   import(
-    "./Pages/MovieDettails.js" /* webpackChunkName: "moviesDetails-page" */
+    "./Pages/MovieDettails/MovieDettails" /* webpackChunkName: "moviesDetails-page" */
   )
 );
 

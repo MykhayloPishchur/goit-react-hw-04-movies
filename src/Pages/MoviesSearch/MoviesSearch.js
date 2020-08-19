@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 // import Serchbar from "../Components/SearchBar/SearchBar";
-import Searchbar from "../Components/SearchBar/SearchBar";
-import api from "../Services/Services";
-import MovieGalleryItem from "../Components/MoviesGalleryItem/MoviesGalleryItem";
+import Searchbar from "../../Components/SearchBar/SearchBar";
+import api from "../../Services/Services";
+import MovieGalleryItem from "../../Components/MoviesGalleryItem/MoviesGalleryItem";
 import styles from "./moviessearch.module.css";
 
 // import PropTypes from "prop-types";

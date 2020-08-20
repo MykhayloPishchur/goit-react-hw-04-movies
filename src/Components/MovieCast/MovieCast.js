@@ -1,20 +1,8 @@
 import React, { Component } from "react";
-import api from "../../Services/Services";
-// import PropTypes from "prop-types";
+import api from "../../Services";
 import styles from "./movieCast.module.css";
 
 export default class MovieCast extends Component {
-  // static propTypes = {
-  //   cast: PropTypes.arrayOf(
-  //     PropTypes.shape({
-  //       credit_id: PropTypes.number.isRequired,
-  //       profile_path: PropTypes.string.isRequired,
-  //       character: PropTypes.string.isRequired,
-  //       name: PropTypes.string.isRequired,
-  //     }).isRequired
-  //   ).isRequired,
-  // };
-
   state = { cast: [] };
 
   componentDidMount() {

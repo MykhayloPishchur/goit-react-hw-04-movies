@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import api from "../../Services/Services";
+import api from "../../Services";
 import MovieGalleryItem from "../../Components/MoviesGalleryItem";
 import styles from "./homepage.module.css";
 

@@ -1,1 +1,1 @@
-Homepage : https://mykhaylopishchur.github.io/goit-react-hw-03-image-finder/
+Homepage : https://MykhayloPishchur.github.io/goit-react-hw-04-movies/

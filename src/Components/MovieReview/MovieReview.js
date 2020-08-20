@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import api from "../../Services/Services";
+import api from "../../Services";
+import styles from "./movieReview.module.css";
 
 export default class MovieReview extends Component {
   state = { reviews: [] };
@@ -20,14 +21,14 @@ export default class MovieReview extends Component {
     const { reviews } = this.state;
 
     return (
-      <div>
+      <div className={styles.rew}>
         {reviews.length === 0 ? (
           <p>We dont have any reviews for this movie</p>
         ) : (
           <ul>
             {reviews.map(({ id, author, content }) => (
               <li key={id}>
-                <p>Author: {author}</p>
+                <p className={styles.autor}> {author} :</p>
                 <p>{content}</p>
               </li>
             ))}

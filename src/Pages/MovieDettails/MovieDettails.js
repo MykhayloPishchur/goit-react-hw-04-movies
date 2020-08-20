@@ -1,6 +1,6 @@
 import React, { Component, lazy, Suspense } from "react";
 import { NavLink, Route, Switch } from "react-router-dom";
-import api from "../../Services/Services";
+import api from "../../Services";
 import styles from "./movieDettails.module.css";
 import PropTypes from "prop-types";
 

@@ -1,8 +1,9 @@
 .container {
-  width: 1200px;
+  width: 80%;
   margin: auto;
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
+  flex-wrap: wrap;
   padding-top: 20px;
 }
 .button {
@@ -18,10 +19,14 @@
   border: 2px dotted #fff;
 }
 .description {
-  width: 600px;
+  width: 40%;
   font-size: 22px;
   margin: auto;
 }
+.description > h1 {
+  margin: 0;
+}
+
 .additional {
   padding-top: 10px;
   font-size: 22px;
@@ -29,8 +34,8 @@
 }
 
 .additional > span {
-  font-size: 24px;
-  font-weight: bold;
+  font-size: 28px;
+  font-weight: 800;
 }
 .nav {
   display: flex;

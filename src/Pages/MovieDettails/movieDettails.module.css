@@ -5,6 +5,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   padding-top: 20px;
+  justify-content: center;
 }
 .button {
   position: absolute;
@@ -21,7 +22,7 @@
 .description {
   width: 40%;
   font-size: 22px;
-  margin: auto;
+  margin-left: 35px;
 }
 .description > h1 {
   margin: 0;

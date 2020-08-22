@@ -6,30 +6,33 @@ import PropTypes from "prop-types";
 const movieGalleryItem = ({ items }) => (
   <>
     {items.map((item) => (
-      <li key={item.id} className={styles.card}>
-        <NavLink
-          className={styles.item}
-          to={{ pathname: `/movies/${item.id}` }}
-        >
-          <div className={styles.imgContainer}>
-            <img
-              className={styles.galleryItem}
-              src={
-                item.backdrop_path
-                  ? "https://image.tmdb.org/t/p/original" + item.backdrop_path
-                  : "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSAUmka06uFKW8BxmZXi8uH_N1euTnUnTWmhQ&usqp=CAU"
+      <div
+        key={item.id}
+        style={
+          item.backdrop_path
+            ? {
+                backgroundImage: `url(https://image.tmdb.org/t/p/original${item.backdrop_path})`,
               }
-              alt={item.title}
-            />
-          </div>
-          <div className={styles.cardDescription}>
-            <span>{item.title}</span>
-            <span style={{ fontWeight: 700, color: "#944dff" }}>
-              {item.vote_average}/10
-            </span>
+            : {
+                backgroundImage:
+                  "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSAUmka06uFKW8BxmZXi8uH_N1euTnUnTWmhQ&usqp=CAU",
+              }
+        }
+        className={styles.moviecard}
+      >
+        <NavLink to={{ pathname: `/movies/${item.id}` }}>
+          <div className={styles.moviecardOverlay}></div>
+          <div className={styles.moviecardContent}>
+            <div className={styles.moviecardHeader}>
+              <h1 className={styles.moviecardTitle}>{item.title}</h1>
+              <h4 className={styles.moviecardInfo}>
+                ({item.release_date.slice(0, 4)} )
+              </h4>
+            </div>
+            {/* <p className={styles.moviecardDesc}>{item.overview}</p> */}
           </div>
         </NavLink>
-      </li>
+      </div>
     ))}
   </>
 );

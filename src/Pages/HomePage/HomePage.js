@@ -26,9 +26,9 @@ export default class HomePage extends Component {
       <>
         <h1>Tranding Today</h1>
 
-        <ul className={styles.cardList}>
+        <div className={styles.cardList}>
           <MovieGalleryItem items={moviesList}></MovieGalleryItem>
-        </ul>
+        </div>
       </>
     );
   }

@@ -1,1 +1,1 @@
-Homepage : https://MykhayloPishchur.github.io/goit-react-hw-04-movies/
+Homepage : https://movie-search-ap.netlify.app/

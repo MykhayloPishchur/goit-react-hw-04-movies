@@ -3,6 +3,7 @@ import { NavLink, Route, Switch } from "react-router-dom";
 import api from "../../Services";
 import styles from "./movieDettails.module.css";
 import PropTypes from "prop-types";
+import Loader from "../../Components/Loader";
 
 const MovieCast = lazy(() =>
   import(
@@ -126,7 +127,7 @@ export default class MoviesDetails extends Component {
               </li>
             </ul>
           </div>
-          <Suspense fallback={<h1>Loading</h1>}>
+          <Suspense fallback={<Loader />}>
             <Switch>
               <Route path="/movies/:movieId/cast" component={MovieCast} />
               <Route path="/movies/:movieId/reviews" component={MovieReview} />
